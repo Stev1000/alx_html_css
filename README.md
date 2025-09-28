@@ -34,10 +34,14 @@ It focuses on introducing Cascading Style Sheets (CSS) to enhance and structure 
 📂 Project Structure
 
 css_basic/
-├── index.html,
-├── tweets.html,
-├── base.css,
-├── styles.css,
+├── index.html
+
+├── tweets.html
+
+├── base.css
+
+├── styles.css
+
 └── README.md
 
 👨‍💻 Author
