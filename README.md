@@ -23,18 +23,22 @@ It focuses on introducing Cascading Style Sheets (CSS) to enhance and structure 
 - Added two CSS files:
   - **`base.css`** → Defines global styling (body, header, footer, tables, etc.).
   - **`styles.css`** → Reserved for project-specific rules (initially empty).
+  
 - Linked both CSS files in each HTML file using:
+  
   ```html
+
   <link href="base.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
 
 📂 Project Structure
+
 css_basic/
-├── index.html       # Portfolio homepage
-├── tweets.html      # Embedded tweets page
-├── base.css         # Global stylesheet
-├── styles.css       # Custom stylesheet (to be extended in later tasks)
-└── README.md        # Project documentation
+├── index.html
+├── tweets.html
+├── base.css
+├── styles.css
+└── README.md
 
 👨‍💻 Author
 
