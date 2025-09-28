@@ -62,3 +62,14 @@ footer {
     background-color: #222;
     color: white;
 }
+
+/* Responsive design for smartphone */
+.works_on_smartphone main {
+    display: block; /* stack article + aside vertically */
+}
+
+.works_on_smartphone article,
+.works_on_smartphone aside {
+    flex: none;      /* remove flex sizing */
+    width: 100%;     /* take full width */
+}
