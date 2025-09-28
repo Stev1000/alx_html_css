@@ -1,2 +1,31 @@
 /* styles.css */
 /* Empty for now – you’ll add custom styles in later tasks */
+/* 1. Make <body> a flex container with vertical stacking */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full height viewport */
+}
+
+/* 2. <main> is also a flex container, horizontal row */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* takes available space */
+}
+
+/* 3. Article takes 2/3 of the space */
+article {
+    flex: 2;
+    padding: 15px;
+    overflow-y: auto; /* scrollable if content is long */
+}
+
+/* 4. Aside takes 1/3 of the space */
+aside {
+    flex: 1;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    overflow-y: auto; /* scrollable if content is long */
+}
