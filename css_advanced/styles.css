@@ -72,7 +72,7 @@ nav ul li a:hover {
 }
 
 .cta-btn {
-  background-color: #ff5a5f;
+  background: linear-gradient(90deg, #c271ff, #e14b4f);
   padding: 15px 40px;
   border-radius: 30px;
   color: #fff;
@@ -82,7 +82,7 @@ nav ul li a:hover {
 }
 
 .cta-btn:hover {
-  background-color: #e14b4f;
+  opacity: 0.9;
 }
 
 /* Quotes */
@@ -257,4 +257,40 @@ blockquote {
 .member-card p {
   font-size: 0.9rem;
   color: #ccc;
+}
+
+/* FAQ */
+.faq {
+  padding: 80px 50px;
+  background: #fff;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
 }
