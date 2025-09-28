@@ -6,9 +6,10 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   color: #333;
+  background: #fff;
 }
 
 /* Header */
@@ -61,7 +62,7 @@ nav ul li a:hover {
 
 .banner h1 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -85,87 +86,141 @@ nav ul li a:hover {
   background-color: #e14b4f;
 }
 
-/* Pros Section */
-.pros {
-  background-color: #fff;
-  padding: 80px 50px;
+/* Quotes */
+.quotes {
+  background: #c271ff;
   text-align: center;
+  color: #fff;
+  padding: 80px 20px;
 }
 
-.pros h2 {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-}
-
-.pros .highlight {
-  color: #a445f7;
-}
-
-.pro-list {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.pro {
-  text-align: center;
-  max-width: 200px;
-}
-
-.pro img {
-  width: 150px;
-  height: 150px;
+.quotes img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.quotes blockquote {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.quotes p {
+  font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
-.pro h3 {
-  font-weight: 600;
-  margin-bottom: 10px;
+.quotes span {
+  font-size: 1rem;
 }
 
-/* Quote Section */
-.quote {
-  background-color: #a445f7;
-  color: #fff;
-  padding: 80px 20px;
+/* Videos Section */
+.videos {
   text-align: center;
+  padding: 80px 50px;
+  background: #fff;
 }
 
-.quote-container {
-  max-width: 800px;
-  margin: 0 auto;
+.videos h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.videos h2 span {
+  color: #c271ff;
+}
+
+.video-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;   /* Horizontal fix */
+  gap: 30px;
+  overflow-x: auto;    /* scroll on small screens */
+}
+
+.video-card {
+  flex: 0 0 250px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.video-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.video-card p {
+  font-size: 0.9rem;
+  margin: 0 15px 20px 15px;
+  color: #666;
+}
+
+.video-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.author {
   display: flex;
   align-items: center;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.quote img {
-  width: 150px;
-  height: 150px;
+.author img {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  flex-shrink: 0;
 }
 
-.quote-text {
-  max-width: 500px;
-  text-align: left;
-}
-
-.quote-message {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.quote-author {
+.author span {
+  font-size: 0.9rem;
   font-weight: bold;
+  color: #c271ff;
 }
 
-.quote-role {
-  font-style: italic;
-  color: #ddd;
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.meta img {
+  height: 15px;
 }
