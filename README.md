@@ -49,7 +49,6 @@ css_basic/
 Steven Nsanzabandi Gasasira
 GitHub Profile
 
-
 ---
 
 ## ✅ Commands to add, commit, and push

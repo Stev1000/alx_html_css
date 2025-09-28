@@ -26,9 +26,8 @@ header ul li a:hover {
     text-decoration: underline;
 }
 
+/* Removed max-width and margin so Flexbox can work */
 main {
-    max-width: 800px;
-    margin: 20px auto;
     padding: 15px;
     background: #fff;
     border-radius: 8px;
@@ -51,7 +50,6 @@ th {
 }
 
 aside {
-    margin-top: 20px;
     padding: 10px;
     background: #e9ecef;
     border-radius: 5px;
