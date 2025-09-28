@@ -9,7 +9,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   color: #333;
-  background: #fff;
 }
 
 /* Header */
@@ -57,7 +56,7 @@ nav ul li a:hover {
   text-align: center;
   padding: 0 20px;
   color: #fff;
-  margin-top: 70px; /* offset for fixed header */
+  margin-top: 70px;
 }
 
 .banner h1 {
@@ -89,33 +88,25 @@ nav ul li a:hover {
 /* Quotes */
 .quotes {
   background: #c271ff;
-  text-align: center;
   color: #fff;
+  text-align: center;
   padding: 80px 20px;
 }
 
-.quotes img {
-  width: 120px;
-  height: 120px;
+.quote-card img {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
-.quotes blockquote {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.quotes p {
+blockquote {
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
-.quotes span {
-  font-size: 1rem;
-}
-
-/* Videos Section */
+/* Videos */
 .videos {
   text-align: center;
   padding: 80px 50px;
@@ -135,17 +126,15 @@ nav ul li a:hover {
 .video-list {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;   /* Horizontal fix */
+  flex-wrap: wrap;
   gap: 30px;
-  overflow-x: auto;    /* scroll on small screens */
 }
 
 .video-card {
-  flex: 0 0 250px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
+  width: 250px;
   text-align: left;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -161,6 +150,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
 .play-btn {
@@ -223,4 +213,48 @@ nav ul li a:hover {
 
 .meta img {
   height: 15px;
+}
+
+/* Membership */
+.membership {
+  background: #071629;
+  color: #fff;
+  text-align: center;
+  padding: 80px 50px;
+}
+
+.membership h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.membership h2 span {
+  color: #c271ff;
+}
+
+.membership-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.member-card {
+  max-width: 200px;
+}
+
+.member-card img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.member-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.member-card p {
+  font-size: 0.9rem;
+  color: #ccc;
 }
