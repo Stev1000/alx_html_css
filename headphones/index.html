@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones - Premium Audio Experience</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="logo-container">
+            <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo">
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#what-we-do">what we do</a></li>
+                <li><a href="#results">our results</a></li>
+                <li><a href="#contact">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#what-we-do">what we do</a></li>
+                <li><a href="#results">our results</a></li>
+                <li><a href="#contact">contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+            <p class="hero-subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+            <a href="#action" class="cta-button">Call to Action</a>
+            <p class="hero-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const body = document.body;
+        
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking outside
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                menuToggle.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
+    </script>
+</body>
+</html>
