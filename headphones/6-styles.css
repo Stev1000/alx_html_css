@@ -1,0 +1,118 @@
+/* ===== Reset & tokens ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#FF6565;
+  --text:#fff;
+  --muted:#cbd5e1;
+  --bg:#0a0e14;
+  --panel:#10161f;
+  --font:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+
+  --bg-pos-y:22%;
+  --hero-top:11vh;
+}
+
+/* ===== Base / helpers ===== */
+html,body{height:100%}
+body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.45}
+.section{padding:72px 20px}
+.container{max-width:1060px;margin:0 auto;padding:0 20px}
+
+/* ===== Header / Hero ===== */
+.header{
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse at 50% 35%,rgba(255,255,255,.06) 0%,rgba(255,255,255,0) 52%),
+    linear-gradient(180deg,rgba(13,17,23,.35) 0%,rgba(10,14,20,.88) 100%),
+    url("images/headphones_hero_1.jpg") 50% var(--bg-pos-y)/cover no-repeat;
+  display:flex;flex-direction:column;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:8px 26px}
+.logo-container{display:flex;align-items:center}
+.logo-lockup{height:16px;width:auto;display:block;opacity:.92}
+.nav-links{list-style:none;display:flex;gap:12px;font-size:11px;font-weight:500;letter-spacing:.1px;opacity:.9}
+.nav-links a{color:var(--text);text-decoration:none}
+.menu-icon{display:none}
+.hero{display:grid;place-items:center;text-align:center;gap:4px;margin:var(--hero-top) auto 0;width:100%;max-width:520px;padding:18px 12px 44px}
+.hero h1{font-size:22px;font-weight:600;line-height:1.25}
+.subtitle{font-size:11px;opacity:.9}
+.cta-btn{margin:10px 0 12px;font-size:11px;background:var(--primary);color:#fff;border:0;padding:8px 18px;border-radius:22px;font-weight:700}
+.hero-desc{max-width:520px;font-size:11px;opacity:.95}
+
+/* ===== What we do ===== */
+.what-we-do{background:linear-gradient(180deg,#0a0e14 0%, #0b0f16 100%);text-align:center}
+.what-we-do h2{font-size:24px;margin-bottom:10px}
+.section-lead{color:var(--muted);max-width:680px;margin:0 auto 40px;font-size:14px}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.feature-card{background:var(--panel);border-radius:16px;padding:28px 20px}
+.feature-icon{display:inline-block;font-size:42px;color:var(--primary);margin-bottom:14px}
+.feature-card h3{font-size:16px;margin-bottom:8px}
+.feature-card p{color:var(--muted);font-size:13px}
+
+/* ===== Our results (CSS pentagons) ===== */
+.our-results{
+  background:linear-gradient(180deg, rgba(10,14,20,.75) 0%, rgba(10,14,20,.9) 100%),
+             radial-gradient(1200px 600px at 50% -20%, rgba(255,255,255,.06), transparent 60%);
+  text-align:center;
+}
+.our-results h2{font-size:24px;margin-bottom:10px}
+.results-grid{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+
+.result{padding:8px}
+.result-badge{
+  width:180px;height:180px;margin:0 auto 16px;
+  position:relative;display:grid;place-items:center;
+  --outer:#fe7575; --inner:#ff6565; --glow:rgba(0,0,0,.25);
+  filter: drop-shadow(0 10px 24px var(--glow));
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,255,255,.25), rgba(255,255,255,0) 55%),
+    var(--outer);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0 38%);
+}
+.result-badge::after{
+  content:""; position:absolute; inset:12px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,255,255,.22), rgba(255,255,255,0) 55%),
+    var(--inner);
+  clip-path: inherit; border-radius:2px;
+}
+.percent{position:relative;z-index:1;font-weight:700;font-size:28px;color:#fff;text-shadow:0 2px 2px rgba(0,0,0,.35)}
+.result-caption{font-size:14px;color:var(--muted)}
+
+/* ===== Contact (minimal) ===== */
+.contact{background:#fff;color:#071629;text-align:center;padding:80px 20px}
+.contact h2{font-size:24px;color:#071629;margin-bottom:28px}
+.contact-form{width:340px;max-width:90vw;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.contact-form label{font-size:12px;font-weight:600;text-align:left;color:#071629}
+.contact-form input,.contact-form textarea{border:none;border-bottom:1px solid #d3d3d3;background:transparent;padding:8px 0;font:inherit;color:#071629;outline:none}
+.contact-form textarea{min-height:60px}
+.cta-min{margin:16px auto 0;background:#FF6565;color:#fff;border:0;padding:10px 22px;border-radius:22px;font-weight:600}
+
+/* ===== Footer (same as Task 5) ===== */
+.footer{background:#0b0f16;padding:26px 0;position:relative}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;position:relative;min-height:48px}
+.footer-logo{height:18px;width:auto;opacity:.95}
+.copyright{position:absolute;left:50%;transform:translateX(-50%);color:#9aa5b1;opacity:.35;font-size:12px;letter-spacing:.2px}
+.social{display:flex;gap:14px}
+.social-btn{inline-size:36px;block-size:36px;border-radius:50%;display:grid;place-items:center;background:#e5e7eb;color:#0b0f16;text-decoration:none}
+.social-btn i{font-size:16px;line-height:1}
+
+/* ===== Responsive ===== */
+@media (max-width:1200px){
+  :root{ --hero-top:10vh; }
+  .features-grid,.results-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  .nav{padding:10px 14px}
+  .nav-links{display:none}
+  .logo-lockup{height:18px}
+  :root{ --hero-top:8vh; }
+
+  .section{padding:56px 16px}
+  .features-grid,.results-grid{grid-template-columns:1fr}
+  .result-badge{width:160px;height:160px}
+
+  .footer{padding:22px 0}
+  .copyright{font-size:11px}
+  .social-btn{inline-size:34px;block-size:34px}
+}
