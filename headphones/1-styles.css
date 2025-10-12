@@ -1,23 +1,27 @@
-/* Reset */
+/* ------------- Reset & Tokens ------------- */
 *{margin:0;padding:0;box-sizing:border-box}
-
-/* Tokens */
 :root{
   --primary:#ff5964;
   --text:#fff;
+  --muted:#cbd5e1;
   --bg:#0a0e14;
+  --panel:#10161f;
   --font:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 
-  /* Tuners for exact placement */
-  --bg-pos-y:22%;      /* move image down a bit so shoulder sits behind title */
-  --hero-top:11vh;     /* where the hero block starts (around the shoulder) */
+  /* precise placement for hero */
+  --bg-pos-y:22%;
+  --hero-top:11vh;
 }
 
-/* Base */
+/* ------------- Base ------------- */
 html,body{height:100%}
 body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.45}
 
-/* Header background + vignette */
+/* ------------- Containers ------------- */
+.section{padding:72px 20px}
+.container{max-width:1060px;margin:0 auto}
+
+/* ------------- Header / Hero ------------- */
 .header{
   min-height:100vh;
   background:
@@ -26,17 +30,14 @@ body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:
     url("images/headphones_hero_1.jpg") 50% var(--bg-pos-y)/cover no-repeat;
   display:flex;flex-direction:column;
 }
-
-/* Nav */
 .nav{display:flex;align-items:center;justify-content:space-between;padding:8px 26px}
 .logo-container{display:flex;align-items:center}
-.logo-lockup{height:16px;width:auto;display:block;opacity:.92} /* small single logo */
+.logo-lockup{height:16px;width:auto;display:block;opacity:.92}
 .nav-links{list-style:none;display:flex;gap:12px;font-size:11px;font-weight:500;letter-spacing:.1px;opacity:.9}
 .nav-links a{color:var(--text);text-decoration:none}
 .nav-links a:hover{color:var(--primary)}
 .menu-icon{display:none;background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
 
-/* Hero (narrow + compact) */
 .hero{
   display:grid;place-items:center;text-align:center;gap:4px;
   margin:var(--hero-top) auto 0;
@@ -54,12 +55,70 @@ body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:
 .cta-btn:active{transform:translateY(1px)}
 .hero-desc{max-width:520px;font-size:11px;line-height:1.5;opacity:.95}
 
-/* Focus */
-a:focus-visible,.cta-btn:focus-visible,.menu-icon:focus-visible{outline:3px solid #fff;outline-offset:3px}
+/* ------------- What we do ------------- */
+.what-we-do{
+  background:linear-gradient(180deg,#0a0e14 0%, #0b0f16 100%);
+  text-align:center;
+}
+.what-we-do h2{
+  font-size:24px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+.section-lead{
+  color:var(--muted);
+  max-width:680px;
+  margin:0 auto 40px;
+  font-size:14px;
+  line-height:1.6;
+}
 
-/* Responsive */
+/* Reusable feature grid */
+.features-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:24px;
+}
+.feature-card{
+  background:var(--panel);
+  border-radius:16px;
+  padding:28px 20px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.feature-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(0,0,0,.32);
+}
+
+/* Icon size/color (uses classes from holberton_school-icon/style.css) */
+.feature-icon{
+  display:inline-block;
+  font-size:42px;          /* makes the font icon large */
+  color:var(--primary);
+  margin-bottom:14px;
+  line-height:1;
+}
+.feature-card h3{
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+.feature-card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+/* ------------- A11y focus ------------- */
+a:focus-visible,.cta-btn:focus-visible,.menu-icon:focus-visible{
+  outline:3px solid #fff;outline-offset:3px;
+}
+
+/* ------------- Responsive ------------- */
 @media (max-width:1200px){
   :root{ --hero-top:10vh; --bg-pos-y:24%; }
+  .features-grid{ grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width:768px){
   .nav{padding:10px 14px}
@@ -67,7 +126,11 @@ a:focus-visible,.cta-btn:focus-visible,.menu-icon:focus-visible{outline:3px soli
   .menu-icon{display:inline-block}
   .logo-lockup{height:18px}
   :root{ --hero-top:8vh; --bg-pos-y:26%; }
+
   .hero{max-width:600px;padding:20px 14px 40px}
   .hero h1{font-size:24px}
   .subtitle,.hero-desc,.cta-btn{font-size:12px}
+
+  .section{padding:56px 16px}
+  .features-grid{ grid-template-columns: 1fr; gap:18px; }
 }

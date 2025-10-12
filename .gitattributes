@@ -1,0 +1,23 @@
+# Normalize to LF in repo; convert to OS-native on checkout
+* text=auto
+
+# Force LF for web text files
+*.html text eol=lf
+*.css  text eol=lf
+*.scss text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+
+# Treat binaries as binary (no line-ending changes)
+*.png  -text
+*.jpg  -text
+*.jpeg -text
+*.gif  -text
+*.ico  -text
+*.svg  -text
+*.woff -text
+*.woff2 -text
+*.ttf  -text
+*.eot  -text
+*.otf  -text
+*.zip  -text

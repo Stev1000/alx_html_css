@@ -2,38 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Headphones</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="0-style.css" />
   </head>
 
   <body>
-    <!-- HEADER SECTION -->
-    <header class="header">
-      <nav class="nav">
+    <header class="header" role="banner">
+      <nav class="nav" aria-label="Primary">
         <div class="logo-container">
-          <img src="images/pentagone.png" alt="Logo icon" class="logo-icon" />
-          <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo-text" />
+          <!-- SINGLE LOGO -->
+          <img src="images/logo_headphones.png" alt="Headphones" class="logo-lockup" />
         </div>
+
         <ul class="nav-links">
           <li><a href="#">what we do</a></li>
           <li><a href="#">our results</a></li>
           <li><a href="#">contact us</a></li>
         </ul>
-        <div class="menu-icon">
-          <span>&#9776;</span>
-        </div>
+
+        <button class="menu-icon" aria-label="Open menu" title="Menu">&#9776;</button>
       </nav>
 
-      <!-- HERO SECTION -->
-      <section class="hero">
+      <section class="hero" aria-label="Hero">
         <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
-        <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+        <p class="subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
         <button class="cta-btn">CALL TO ACTION</button>
-
         <p class="hero-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </section>
     </header>
