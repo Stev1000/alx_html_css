@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Headphones</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="holberton_school-icon/style.css" />
+    <link rel="stylesheet" href="7-styles.css" />
+  </head>
+
+  <body>
+    <!-- ===== Header / Hero ===== -->
+    <header class="header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <div class="logo-container">
+          <img src="images/logo_headphones.png" alt="Headphones" class="logo-lockup" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#what-we-do">what we do</a></li>
+          <li><a href="#our-results">our results</a></li>
+          <li><a href="#contact-us">contact us</a></li>
+        </ul>
+        <button class="menu-icon" aria-label="Open menu" title="Menu">&#9776;</button>
+      </nav>
+
+      <section class="hero" aria-label="Hero">
+        <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+        <p class="subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+        <button class="cta-btn" onclick="location.href='#contact-us'">CALL TO ACTION</button>
+        <p class="hero-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </section>
+    </header>
+
+    <!-- ===== What we do (animated) ===== -->
+    <section id="what-we-do" class="section what-we-do" aria-labelledby="what-title">
+      <div class="container">
+        <h2 id="what-title">What we do…</h2>
+        <p class="section-lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.
+        </p>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-icon holberton_school-icon-ic_sound" aria-hidden="true"></span>
+            <h3>Audio engineering</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon holberton_school-icon-ic_video" aria-hidden="true"></span>
+            <h3>Live sessions</h3>
+            <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon holberton_school-icon-ic_music" aria-hidden="true"></span>
+            <h3>Music production</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon holberton_school-icon-ic_hearing" aria-hidden="true"></span>
+            <h3>Hearing comfort</h3>
+            <p>Excepteur sint occaecat cupidatat non proident.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Our results (animated) ===== -->
+    <section id="our-results" class="section our-results" aria-labelledby="results-title">
+      <div class="container">
+        <h2 id="results-title">Our results</h2>
+        <p class="section-lead">Numbers that speak for themselves.</p>
+
+        <div class="results-grid">
+          <div class="result">
+            <div class="result-badge"><span class="percent">+2%</span></div>
+            <p class="result-caption">Lorem ipsum</p>
+          </div>
+          <div class="result">
+            <div class="result-badge"><span class="percent">+50%</span></div>
+            <p class="result-caption">Dolor sit amet</p>
+          </div>
+          <div class="result">
+            <div class="result-badge"><span class="percent">90%</span></div>
+            <p class="result-caption">Consectetur</p>
+          </div>
+          <div class="result">
+            <div class="result-badge"><span class="percent">+120%</span></div>
+            <p class="result-caption">Incididunt</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact (minimal) ===== -->
+    <section id="contact-us" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact us</h2>
+      <form class="contact-form" action="#" method="post" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="3" required></textarea>
+        <button type="submit" class="cta-min">CALL TO ACTION</button>
+      </form>
+    </section>
+
+    <!-- ===== Footer (same as Task 5) ===== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-inner container">
+        <img src="images/logo_headphones.png" alt="Headphones" class="footer-logo" />
+        <small class="copyright">© Headphones 2020</small>
+        <nav class="social" aria-label="Social media">
+          <a href="#" aria-label="Facebook" class="social-btn">
+            <i class="holberton_school-icon-ic_facebook" aria-hidden="true"></i>
+          </a>
+          <a href="#" aria-label="Twitter" class="social-btn">
+            <i class="holberton_school-icon-ic_twitter" aria-hidden="true"></i>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-btn">
+            <i class="holberton_school-icon-ic_instagram" aria-hidden="true"></i>
+          </a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
