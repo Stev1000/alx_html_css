@@ -1,0 +1,162 @@
+/* ---------------- Reset & Tokens ---------------- */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#ff5964;
+  --text:#fff;
+  --muted:#cbd5e1;
+  --bg:#0a0e14;
+  --panel:#10161f;
+  --font:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+
+  /* hero placement (same as Task 2 so header stays matched) */
+  --bg-pos-y:22%;
+  --hero-top:11vh;
+}
+
+/* ---------------- Base ---------------- */
+html,body{height:100%}
+body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.45}
+
+/* ---------------- Utilities ---------------- */
+.section{padding:72px 20px}
+.container{max-width:1060px;margin:0 auto}
+
+/* ---------------- Header / Hero ---------------- */
+.header{
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse at 50% 35%,rgba(255,255,255,.06) 0%,rgba(255,255,255,0) 52%),
+    linear-gradient(180deg,rgba(13,17,23,.35) 0%,rgba(10,14,20,.88) 100%),
+    url("images/headphones_hero_1.jpg") 50% var(--bg-pos-y)/cover no-repeat;
+  display:flex;flex-direction:column;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:8px 26px}
+.logo-container{display:flex;align-items:center}
+.logo-lockup{height:16px;width:auto;display:block;opacity:.92}
+.nav-links{list-style:none;display:flex;gap:12px;font-size:11px;font-weight:500;letter-spacing:.1px;opacity:.9}
+.nav-links a{color:var(--text);text-decoration:none}
+.nav-links a:hover{color:var(--primary)}
+.menu-icon{display:none;background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
+
+.hero{
+  display:grid;place-items:center;text-align:center;gap:4px;
+  margin:var(--hero-top) auto 0;
+  width:100%;max-width:520px;padding:18px 12px 44px;
+}
+.hero h1{font-size:22px;font-weight:600;line-height:1.25;letter-spacing:.15px;text-shadow:0 2px 2px rgba(0,0,0,.35)}
+.subtitle{font-size:11px;font-weight:500;opacity:.9}
+.cta-btn{
+  margin:10px 0 12px;font-size:11px;background:var(--primary);color:#fff;border:0;
+  padding:8px 18px;border-radius:22px;font-weight:700;cursor:pointer;
+  box-shadow:0 10px 22px rgba(0,0,0,.22), inset 0 -2px 0 rgba(0,0,0,.12);
+  transition:transform .1s ease, background-color .25s ease, filter .25s ease;
+}
+.cta-btn:hover{background:#ea4856;filter:brightness(1.02)}
+.cta-btn:active{transform:translateY(1px)}
+.hero-desc{max-width:520px;font-size:11px;line-height:1.5;opacity:.95}
+
+/* ---------------- What we do (reused) ---------------- */
+.what-we-do{
+  background:linear-gradient(180deg,#0a0e14 0%, #0b0f16 100%);
+  text-align:center;
+}
+.what-we-do h2{
+  font-size:24px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+.section-lead{
+  color:var(--muted);
+  max-width:680px;
+  margin:0 auto 40px;
+  font-size:14px;
+  line-height:1.6;
+}
+.features-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:24px;
+}
+.feature-card{
+  background:var(--panel);
+  border-radius:16px;
+  padding:28px 20px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.feature-card:hover{ transform:translateY(-2px); box-shadow:0 14px 30px rgba(0,0,0,.32); }
+.feature-icon{ display:inline-block; font-size:42px; color:var(--primary); margin-bottom:14px; line-height:1; }
+.feature-card h3{ font-size:16px; font-weight:600; margin-bottom:8px; }
+.feature-card p{ color:var(--muted); font-size:13px; line-height:1.6; }
+
+/* ---------------- Our Results (new) ---------------- */
+.our-results{
+  /* Use the second hero image with a softer overlay to match samples */
+  background:
+    linear-gradient(180deg, rgba(10,14,20,.75) 0%, rgba(10,14,20,.9) 100%),
+    url("images/headphones_hero_2.jpg") center/cover no-repeat;
+  text-align:center;
+}
+.our-results h2{
+  font-size:24px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+.results-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:24px;
+  align-items:start;
+}
+
+/* Badge made from the pentagon image; % sits centered */
+.result-badge{
+  width:180px; height:180px;
+  margin:0 auto 16px;
+  background:url("images/pentagone.png") center/contain no-repeat;
+  position:relative;
+  display:grid; place-items:center;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.25));
+}
+.result-badge .percent{
+  font-weight:700;
+  font-size:28px;
+  color:#fff;
+  text-shadow:0 2px 2px rgba(0,0,0,.35);
+}
+
+/* caption text */
+.result-caption{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* result wrapper (helps center caption + badge) */
+.result{padding:8px}
+
+/* ---------------- A11y focus ---------------- */
+a:focus-visible,.cta-btn:focus-visible,.menu-icon:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width:1200px){
+  :root{ --hero-top:10vh; --bg-pos-y:24%; }
+  .features-grid{ grid-template-columns: repeat(2, 1fr); }
+  .results-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width:768px){
+  .nav{padding:10px 14px}
+  .nav-links{display:none}
+  .menu-icon{display:inline-block}
+  .logo-lockup{height:18px}
+  :root{ --hero-top:8vh; --bg-pos-y:26%; }
+
+  .hero{max-width:600px;padding:20px 14px 40px}
+  .hero h1{font-size:24px}
+  .subtitle,.hero-desc,.cta-btn{font-size:12px}
+
+  .section{padding:56px 16px}
+  .features-grid{ grid-template-columns: 1fr; gap:18px; }
+  .results-grid{ grid-template-columns: 1fr; gap:18px; }
+  .result-badge{ width:160px; height:160px; }
+}
